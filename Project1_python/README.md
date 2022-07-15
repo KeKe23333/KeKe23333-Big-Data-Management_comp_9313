@@ -65,21 +65,14 @@ To reduce the difficulty of the project, you are allowed to pass the total numbe
 years to your job. We will also use more than 1 reducer to test your code. Assuming
 there are 20 years, and we use 2 reducers, we will use the following command to run
 your code:
-$ python3 project1.py -r hadoop hdfs_input -o hdfs_output --jobconf
-myjob.settings.years=20 --jobconf mapreduce.job.reduces=2
+
+
+$ python3 project1.py -r hadoop hdfs_input -o hdfs_output --jobconf myjob.settings.years=20 --jobconf mapreduce.job.reduces=2
+
+
 In this command, hdfs_input is the input file in HDFS, and hdfs_output is the
 output folder in HDFS. You can access the total number of years in your program
 like “N = jobconf_from_env('myjob.settings.years')” (use “from mrjob.compat
 import jobconf_from_env” in your code).
-Please ensure that the code you submit can be compiled. Any solution that has
-compilation errors will receive no more than 4 points.
-Marking Criteria:
-Your source code will be inspected and marked based on readability and ease of
-understanding. The documentation (comments of the codes) in your source code is
-also important. Below is an indicative marking scheme:
-Result correctness: 6
-Algorithm design (the use of design patterns
-learned to reduce memory consumption and
-to improve efficiency): 5
-Code structure, Readability, and
-Documentation: 1
+
+
